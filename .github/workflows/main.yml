@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.11
+        with:
+          heroku_api_key: ${{56edb5f7-014f-48d1-81f3-2115e6d979aa}}
+          heroku_app_name: "lit-temple-69256"
+          heroku_email: "tyleroliveira63@gmail.com"
